@@ -104,6 +104,7 @@
     
     //录制完的播放控制，通过路径找到对应的录制文件
     [self.player stop];
+    [self.recorder stop];
     NSError *error;
     self.player = [[AVAudioPlayer alloc]initWithContentsOfURL:[NSURL fileURLWithPath:self.filePath] error:&error];
     
