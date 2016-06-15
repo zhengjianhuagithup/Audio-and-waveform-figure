@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wqr-hz-gii">
+                                <rect key="frame" x="100" y="390" width="30" height="30"/>
+                                <state key="normal" title="开始"/>
+                                <connections>
+                                    <action selector="startBTAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="9Dz-8t-48R"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="z3B-Ya-0ZO">
+                                <rect key="frame" x="305" y="390" width="30" height="30"/>
+                                <state key="normal" title="播放"/>
+                                <connections>
+                                    <action selector="playerBTAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="ff6-ZN-iWY"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pDe-Py-a00">
+                                <rect key="frame" x="470" y="390" width="30" height="30"/>
+                                <state key="normal" title="结束"/>
+                                <connections>
+                                    <action selector="endBTAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="jeL-Sk-bfA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ddx-Jv-lN9">
+                                <rect key="frame" x="305" y="493" width="45" height="30"/>
+                                <state key="normal" title="波形图"/>
+                                <connections>
+                                    <action selector="waveform:" destination="BYZ-38-t0r" eventType="touchUpInside" id="8Eo-fG-b1D"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="ddx-Jv-lN9" secondAttribute="bottom" constant="100" id="DPS-wI-ODA"/>
+                            <constraint firstItem="z3B-Ya-0ZO" firstAttribute="bottom" secondItem="wqr-hz-gii" secondAttribute="bottom" id="PMe-d0-6zv"/>
+                            <constraint firstItem="wqr-hz-gii" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="50" id="R8E-EO-vDN"/>
+                            <constraint firstItem="ddx-Jv-lN9" firstAttribute="top" secondItem="z3B-Ya-0ZO" secondAttribute="bottom" constant="30" id="T3j-py-57k"/>
+                            <constraint firstItem="ddx-Jv-lN9" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="TmU-hd-xgs"/>
+                            <constraint firstAttribute="trailing" secondItem="pDe-Py-a00" secondAttribute="trailing" constant="50" id="lBs-RI-5lX"/>
+                            <constraint firstItem="pDe-Py-a00" firstAttribute="bottom" secondItem="wqr-hz-gii" secondAttribute="bottom" id="uSL-uy-euY"/>
+                            <constraint firstItem="z3B-Ya-0ZO" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="xGK-W6-hoB"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="endBT" destination="pDe-Py-a00" id="y0t-VZ-OzY"/>
+                        <outlet property="playerBT" destination="z3B-Ya-0ZO" id="Qjz-4g-rJM"/>
+                        <outlet property="startBT" destination="wqr-hz-gii" id="Pgl-DL-92Q"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="302" y="366"/>
+        </scene>
+    </scenes>
+</document>
